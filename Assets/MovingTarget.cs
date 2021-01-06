@@ -6,7 +6,6 @@ public class MovingTarget : MonoBehaviour
 {
     public float speed = 1;
     public Vector3 target = Vector3.zero;
-    public Vector3 player
 
     private Vector3 currentTarget = Vector3.zero;
     private Vector3 startingPosition = Vector3.zero;
@@ -43,9 +42,9 @@ public class MovingTarget : MonoBehaviour
             }
         }
 
-        //transform.LookAt();
 
         float step = Time.deltaTime * speed;
+        
         transform.position = Vector3.MoveTowards(transform.position, currentTarget, step);
     }
 }
